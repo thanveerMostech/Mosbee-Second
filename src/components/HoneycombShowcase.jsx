@@ -51,7 +51,7 @@ export default function HoneycombShowcase() {
           <div className="flex items-center space-x-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-blue animate-pulse"></span>
             <span className="font-mono text-xs text-base-white font-bold uppercase tracking-wider">
-              MOSBEE CORE ARCHITECTURE
+              MOSBEE ARCHITECTURE
             </span>
           </div>
           <span className="font-mono text-[11px] text-base-white px-2.5 py-0.5 rounded-full bg-accent-blue/10 border border-accent-blue/30 flex items-center gap-1.5 font-semibold">
@@ -97,39 +97,34 @@ export default function HoneycombShowcase() {
                     key={key}
                     type="button"
                     onClick={() => handleSelect(key)}
-                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${
-                      isActive
+                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${isActive
                         ? 'active-hex bg-accent-blue shadow-lg shadow-accent-blue/30'
                         : 'bg-base-white/20'
-                    }`}
+                      }`}
                   >
                     <div
-                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors relative ${
-                        isActive
+                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors relative ${isActive
                           ? 'bg-accent-blue text-base-white'
                           : 'bg-base-black group-hover:bg-accent-blue/10'
-                      }`}
+                        }`}
                     >
                       {isActive && (
                         <div className="absolute top-2 w-1.5 h-1.5 rounded-full bg-base-white animate-ping"></div>
                       )}
                       <IconComponent
                         size={19}
-                        className={`mb-1 transition-colors ${
-                          isActive ? 'text-base-white' : 'text-accent-blue'
-                        }`}
+                        className={`mb-1 transition-colors ${isActive ? 'text-base-white' : 'text-accent-blue'
+                          }`}
                       />
                       <span
-                        className={`font-sans font-bold text-[11px] leading-tight block ${
-                          isActive ? 'text-base-white' : 'text-base-white'
-                        }`}
+                        className={`font-sans font-bold text-[11px] leading-tight block ${isActive ? 'text-base-white' : 'text-base-white'
+                          }`}
                       >
                         {item.label}
                       </span>
                       <span
-                        className={`text-[9px] font-mono ${
-                          isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
-                        }`}
+                        className={`text-[9px] font-mono ${isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
+                          }`}
                       >
                         {item.sub}
                       </span>
@@ -148,39 +143,34 @@ export default function HoneycombShowcase() {
                   <button
                     type="button"
                     onClick={() => handleSelect('crm')}
-                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${
-                      isActive
+                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${isActive
                         ? 'active-hex bg-accent-blue shadow-lg shadow-accent-blue/30'
                         : 'bg-base-white/20'
-                    }`}
+                      }`}
                   >
                     <div
-                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${
-                        isActive
+                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${isActive
                           ? 'bg-accent-blue text-base-white'
                           : 'bg-base-black group-hover:bg-accent-blue/10'
-                      }`}
+                        }`}
                     >
                       {isActive && (
                         <div className="absolute top-2 w-1.5 h-1.5 rounded-full bg-base-white animate-ping"></div>
                       )}
                       <TrendingUp
                         size={19}
-                        className={`mb-1 transition-colors ${
-                          isActive ? 'text-base-white' : 'text-accent-blue'
-                        }`}
+                        className={`mb-1 transition-colors ${isActive ? 'text-base-white' : 'text-accent-blue'
+                          }`}
                       />
                       <span
-                        className={`font-sans font-bold text-[11px] leading-tight block ${
-                          isActive ? 'text-base-white' : 'text-base-white'
-                        }`}
+                        className={`font-sans font-bold text-[11px] leading-tight block ${isActive ? 'text-base-white' : 'text-base-white'
+                          }`}
                       >
                         CRM
                       </span>
                       <span
-                        className={`text-[9px] font-mono ${
-                          isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
-                        }`}
+                        className={`text-[9px] font-mono ${isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
+                          }`}
                       >
                         Sales
                       </span>
@@ -197,11 +187,9 @@ export default function HoneycombShowcase() {
                     className="text-accent-blue mb-1 animate-pulse"
                   />
                   <span className="text-[12px] font-extrabold text-base-white tracking-tight">
-                    MOSBEE CORE
+                    MOSBEE
                   </span>
-                  <span className="text-[8px] font-mono text-accent-blue uppercase tracking-widest mt-0.5 font-bold">
-                    Business OS
-                  </span>
+
                   <span className="text-[7.5px] font-mono text-base-white/60 leading-none mt-1">
                     1 Shared DB
                   </span>
@@ -215,39 +203,34 @@ export default function HoneycombShowcase() {
                   <button
                     type="button"
                     onClick={() => handleSelect('pro')}
-                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${
-                      isActive
+                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${isActive
                         ? 'active-hex bg-accent-blue shadow-lg shadow-accent-blue/30'
                         : 'bg-base-white/20'
-                    }`}
+                      }`}
                   >
                     <div
-                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${
-                        isActive
+                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${isActive
                           ? 'bg-accent-blue text-base-white'
                           : 'bg-base-black group-hover:bg-accent-blue/10'
-                      }`}
+                        }`}
                     >
                       {isActive && (
                         <div className="absolute top-2 w-1.5 h-1.5 rounded-full bg-base-white animate-ping"></div>
                       )}
                       <BarChart3
                         size={19}
-                        className={`mb-1 transition-colors ${
-                          isActive ? 'text-base-white' : 'text-accent-blue'
-                        }`}
+                        className={`mb-1 transition-colors ${isActive ? 'text-base-white' : 'text-accent-blue'
+                          }`}
                       />
                       <span
-                        className={`font-sans font-bold text-[11px] leading-tight block ${
-                          isActive ? 'text-base-white' : 'text-base-white'
-                        }`}
+                        className={`font-sans font-bold text-[11px] leading-tight block ${isActive ? 'text-base-white' : 'text-base-white'
+                          }`}
                       >
                         PRO
                       </span>
                       <span
-                        className={`text-[9px] font-mono ${
-                          isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
-                        }`}
+                        className={`text-[9px] font-mono ${isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
+                          }`}
                       >
                         Power Tier
                       </span>
@@ -268,39 +251,34 @@ export default function HoneycombShowcase() {
                     key={key}
                     type="button"
                     onClick={() => handleSelect(key)}
-                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${
-                      isActive
+                    className={`hex-border-wrap group relative w-[102px] h-[108px] p-[2.5px] hex-shape focus:outline-none cursor-pointer transition-all ${isActive
                         ? 'active-hex bg-accent-blue shadow-lg shadow-accent-blue/30'
                         : 'bg-base-white/20'
-                    }`}
+                      }`}
                   >
                     <div
-                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${
-                        isActive
+                      className={`w-full h-full hex-shape flex flex-col items-center justify-center p-2 text-center transition-colors ${isActive
                           ? 'bg-accent-blue text-base-white'
                           : 'bg-base-black group-hover:bg-accent-blue/10'
-                      }`}
+                        }`}
                     >
                       {isActive && (
                         <div className="absolute top-2 w-1.5 h-1.5 rounded-full bg-base-white animate-ping"></div>
                       )}
                       <IconComponent
                         size={19}
-                        className={`mb-1 transition-colors ${
-                          isActive ? 'text-base-white' : 'text-accent-blue'
-                        }`}
+                        className={`mb-1 transition-colors ${isActive ? 'text-base-white' : 'text-accent-blue'
+                          }`}
                       />
                       <span
-                        className={`font-sans font-bold text-[11px] leading-tight block ${
-                          isActive ? 'text-base-white' : 'text-base-white'
-                        }`}
+                        className={`font-sans font-bold text-[11px] leading-tight block ${isActive ? 'text-base-white' : 'text-base-white'
+                          }`}
                       >
                         {item.label}
                       </span>
                       <span
-                        className={`text-[9px] font-mono ${
-                          isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
-                        }`}
+                        className={`text-[9px] font-mono ${isActive ? 'text-base-white/80 font-semibold' : 'text-base-white/60'
+                          }`}
                       >
                         {item.sub}
                       </span>
@@ -326,9 +304,8 @@ export default function HoneycombShowcase() {
       {/* Live Preview Showcase Panel */}
       <div
         id="preview-panel"
-        className={`lg:col-span-7 bg-base-black border border-base-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group shadow-md transition-opacity duration-300 ${
-          isTransitioning ? 'opacity-60' : 'opacity-100'
-        }`}
+        className={`lg:col-span-7 bg-base-black border border-base-white/10 rounded-2xl overflow-hidden flex flex-col justify-between group shadow-md transition-opacity duration-300 ${isTransitioning ? 'opacity-60' : 'opacity-100'
+          }`}
       >
         <div className="p-4 border-b border-base-white/10 flex flex-wrap items-center justify-between gap-2 bg-base-white/5">
           <div className="flex items-center space-x-3">
