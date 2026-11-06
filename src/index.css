@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --color-black: #0A0A0A;
+  --color-white: #FFFFFF;
+  --color-offwhite: #F5F5F5;
+  --color-blue: #2563EB;
+  --color-yellow: #FACC15;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.font-sans,
+.font-mono {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.hex-shape {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex-border-wrap {
+  filter: drop-shadow(0 2px 4px rgba(10, 10, 10, 0.12));
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hex-border-wrap.active-hex {
+  filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.45)) drop-shadow(0 0 2px rgba(37, 99, 235, 0.7));
+  transform: translateY(-2px) scale(1.05);
+}
+
+.hex-border-wrap:hover:not(.active-hex) {
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.25));
+  transform: translateY(-2px) scale(1.02);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Section-Level Contextual Backgrounds & Contrast Overlays
+   Strictly using the 4-color system: #0A0A0A, #FFFFFF/#F5F5F5, #2563EB, #FACC15
+   ========================================================================== */
+
+/* Allow container backgrounds to show through Pricing & Demo sections */
+#pricing-section,
+#demo-section {
+  background-color: transparent !important;
+}
+
+/* 1. HERO DARK VIDEO STAGE OVERLAY & CONTRAST (#0A0A0A + faint #2563EB glow) */
+.section-bg-overlay-hero-dark {
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.62) 50%, rgba(10, 10, 10, 0.78) 100%),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0.55) 50%, rgba(10, 10, 10, 0.92) 100%);
+}
+
+.hero-ambient-glow-left {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, rgba(10, 10, 10, 0.2) 50%, transparent 70%);
+  filter: blur(70px);
+}
+
+.hero-ambient-glow-right {
+  background: radial-gradient(ellipse at 80% 80%, rgba(37, 99, 235, 0.14) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+/* 2. LIGHT ARCHITECTURAL IMAGE STAGE OVERLAY (#FFFFFF & #F5F5F5) */
+.section-bg-overlay-light-edge {
+  background:
+    linear-gradient(90deg, rgba(245, 245, 245, 0.85) 0%, rgba(255, 255, 255, 0.94) 22%, rgba(255, 255, 255, 0.94) 78%, rgba(245, 245, 245, 0.85) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 245, 245, 0.88) 50%, rgba(255, 255, 255, 0.96) 100%);
+  backdrop-filter: blur(1px);
+}
+
+/* 3. DARK STAGE OVERLAY (#0A0A0A with subtle #2563EB tint) */
+.section-bg-overlay-dark {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.92) 50%, rgba(10, 10, 10, 0.96) 100%);
+  backdrop-filter: blur(1.5px);
+}
+
+.section-dot-grid {
+  opacity: 0.06;
+  background-image: radial-gradient(#2563EB 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* 4. DEMO / CTA DARK STAGE OVERLAY */
+.section-bg-overlay-cta {
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.90) 50%, rgba(10, 10, 10, 0.96) 100%);
+  backdrop-filter: blur(1.5px);
+}
